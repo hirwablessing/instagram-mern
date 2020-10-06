@@ -1,0 +1,23 @@
+.imageUpload {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: auto;/*center the element*/
+    margin-right: auto;/*center the element*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.imageUpload__caption{
+    padding: 10px;
+    outline: none;
+
+}
+
+.imageUpload__file{
+    margin-top: 10px;
+}
+
+.imageUpload__progress{
+    width: 100%;
+}
