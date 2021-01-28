@@ -19,17 +19,16 @@ mongoose.connect(process.env.CONNECTION_URL, {
 });
 
 module.exports.db = mongoose.connection.once("open", () => {
-  // console.log("DB connected");
+  // Connection to MongoDb was initialized
 
   //initialiaze a realtime watcher to watch for any change in the database
   const changeStream = mongoose.connection.collection("posts").watch();
   changeStream.on("change", (change) => {
-    // console.log("Change triggered on pusher");
-    // console.log(change);
-    // console.log("End of change");
+    //Change triggered on pusher
+   //End of change;
 
     if (change.operationType === "insert") {
-      // console.log("Triggering Pusher **IMG UPLOAD**");
+      // Triggering Pusher **IMG UPLOAD**;
 
       //insert into post table
 
